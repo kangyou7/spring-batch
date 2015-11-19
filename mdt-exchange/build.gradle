@@ -1,0 +1,36 @@
+buildscript {
+	repositories {
+		jcenter()
+		maven { url "http://repo.spring.io/snapshot" }
+		maven { url "http://repo.spring.io/milestone"
+		} }
+	dependencies { classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.7.RELEASE") }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar { baseName = 'mdt_exchange' //version =  '0.1.0'
+}
+
+repositories {
+	jcenter()
+	maven { url "http://repo.spring.io/snapshot" }
+	maven { url "http://repo.spring.io/milestone" } }
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter")
+    compile("org.springframework:spring-jdbc")
+	compile("org.springframework:spring-test")
+	compile('commons-lang:commons-lang:2.6')
+	compile fileTree(include: ['*.jar'], dir: 'libs')
+	testCompile("junit:junit")
+
+}
+
+task wrapper(type: Wrapper) { gradleVersion = '2.3' }

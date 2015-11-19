@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hello.test.TableExchange" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-11-19T06:02:37" hostname="kangyou-PC" time="0.126">
+  <properties/>
+  <testcase name="now" classname="hello.test.TableExchange" time="0.126"/>
+  <system-out><![CDATA[15
+15
+2015111914
+20151119
+14
+1]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
